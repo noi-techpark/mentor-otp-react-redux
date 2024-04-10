@@ -10,7 +10,7 @@ env:
 jobs:
   deploy-test:
     runs-on: ubuntu-22.04
-    concurrency: deploy-test-frontend
+    concurrency: deploy-test
     env:
       AWS_S3_BUCKET_NAME: 'mentor-otp-frontend-test'
     steps:
@@ -20,6 +20,7 @@ jobs:
       - uses: noi-techpark/github-actions/yarn-build@v2
         with:
           build-command: env YAML_CONFIG=$PWD/config-mentor-otp.yml yarn build
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Sync to S3 bucket
         uses: noi-techpark/github-actions/aws-s3-bucket-sync@v2
