@@ -169,7 +169,7 @@ map:
         - CAR_RENT
       companies:
         - SUEDTIROL
-      api: https://carsharing.otp.opendatahub.testingmachine.eu/carsharing/stations.json
+      api: https://carsharing.otp.opendatahub.testingmachine.eu/noi/gbfs.json
       iconWidth: 42
       iconHeight: 50
       iconMarkerColor: "#d9bd48"
