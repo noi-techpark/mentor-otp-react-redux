@@ -2,22 +2,24 @@ import { Button as BsButton } from 'react-bootstrap'
 import styled, { css } from 'styled-components'
 
 import { StyledIconWrapper } from '../util/styledIcon'
+import { colors, shadows, borderRadius } from '../util/design-tokens'
 
 import DefaultCounter from './call-time-counter'
 
 // Call Taker Controls Components
+// Using Open Data Hub grayscale palette
 
-const RED = '#C35134'
-const BLUE = '#1C4D89'
-const GREEN = '#6B931B'
-const PURPLE = '#8134D3'
+const RED = colors.secondary // Black for error/alert states
+const BLUE = colors.secondary // Black for primary actions
+const GREEN = colors.quaternary // Medium gray for secondary actions
+const PURPLE = colors.quaternary // Medium gray for tertiary actions
 
 const circleButtonStyle = css`
   aspect-ratio: 1/1;
   border: none;
   border-radius: 50%;
-  box-shadow: 2px 2px 4px #000000;
-  color: white;
+  box-shadow: ${shadows.lg};
+  color: ${colors.text.inverse};
   position: absolute;
   z-index: 999999;
 `
@@ -31,9 +33,9 @@ export const CallHistoryButton = styled.button`
 
 export const CallTimeCounter = styled(DefaultCounter)`
   background-color: ${BLUE};
-  border-radius: 20px;
-  box-shadow: 2px 2px 4px #000000;
-  color: white;
+  border-radius: ${borderRadius.lg};
+  box-shadow: ${shadows.lg};
+  color: ${colors.text.inverse};
   font-weight: 600;
   margin-left: -8px;
   position: absolute;
@@ -141,7 +143,7 @@ export const Text = styled.span`
 
 export const Val = styled.span`
   :empty:before {
-    color: #685c5c;
+    color: ${colors.quaternary};
     content: 'N/A';
   }
 `
@@ -160,7 +162,7 @@ export const MailablesList = styled.div`
 `
 
 const mailableItemCss = css`
-  background-color: #eaeaea;
+  background-color: ${colors.background.secondary};
   display: block;
   margin: 0px 0px 2px 0px;
   max-width: 290px;

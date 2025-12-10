@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { colors, shadows, transitions, borderRadius } from '../util/design-tokens'
 
 export const buttonPixels = 51
 
@@ -8,16 +9,16 @@ export const activeCss = css`
 `
 
 const buttonTransitionCss = css`
-  transition: all 250ms ease-out;
+  transition: all ${transitions.base};
 `
 
 export const boxShadowCss = css`
-  box-shadow: rgba(0, 0, 0, 0.15) 0 0 20px;
+  box-shadow: ${shadows.lg};
 `
 
 // TODO: this needs to be in line with the mode selector buttons, ideally importing the styles
 export const buttonCss = css`
-  border-radius: 5px;
+  border-radius: ${borderRadius.md};
   border: 0px;
   height: ${buttonPixels}px;
   margin: 0px;
@@ -25,7 +26,7 @@ export const buttonCss = css`
   ${buttonTransitionCss}
 
   &:active {
-    background: #e5e5e5;
+    background: ${colors.background.secondary};
   }
 
   &:hover {
@@ -42,14 +43,14 @@ export const Button = styled.button`
 `
 
 export const PlanTripButton = styled(Button)`
-  background-color: green;
-  color: #ffffffdd;
+  background-color: ${colors.secondary};
+  color: ${colors.text.inverse};
   padding: 5px;
 
   &:active {
     ${activeCss}
-    background: green;
-    filter: saturate(50%);
+    background: ${colors.secondary};
+    filter: brightness(80%);
   }
 
   span {

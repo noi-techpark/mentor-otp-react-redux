@@ -6,14 +6,15 @@ import {
 import { Input, MenuItemLi } from '@opentripplanner/location-field/lib/styled'
 import LocationField from '@opentripplanner/location-field'
 import styled, { css } from 'styled-components'
+import { colors, shadows, transitions, borderRadius } from '../util/design-tokens'
 
 const commonButtonCss = css`
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   background: none;
-  border: 1px solid rgb(187, 187, 187);
-  border-radius: 3px;
+  border: 1px solid ${colors.border.medium};
+  border-radius: ${borderRadius.sm};
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -24,23 +25,23 @@ const commonButtonCss = css`
   user-select: none;
 
   &.active {
-    background-color: var(--main-base-color, rgb(173, 216, 230));
-    border: 2px solid rgb(0, 0, 0);
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    color: var(--main-color, white);
+    background-color: var(--main-base-color, ${colors.secondary});
+    border: 2px solid ${colors.secondary};
+    box-shadow: inset 0 3px 5px ${colors.shadow.md};
+    color: var(--main-color, ${colors.text.inverse});
     font-weight: 600;
   }
 `
 
 export const commonInputCss = css`
   background: none;
-  border: 1px solid #ccc;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  color: #555;
+  border: 1px solid ${colors.border.medium};
+  box-shadow: inset 0 1px 1px ${colors.shadow.sm};
+  color: ${colors.text.primary};
   font-family: inherit;
   font-weight: inherit;
   padding: 6px 12px;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ${transitions.fast}, box-shadow ${transitions.fast};
 `
 
 export const modeButtonButtonCss = css`
@@ -55,15 +56,15 @@ export const Dot = styled.div`
   right: -3px;
   width: 10px;
   height: 10px;
-  border-radius: 5px;
-  background-color: #f00;
+  border-radius: ${borderRadius.md};
+  background-color: ${colors.secondary};
 `
 
 export const StyledSettingsSelectorPanel = styled(SettingsSelectorPanel)`
   ${modeButtonButtonCss}
 
   ${TripFormClasses.SettingLabel} {
-    color: #686868;
+    color: ${colors.quaternary};
     font-size: 14px;
     font-weight: inherit;
     letter-spacing: 1px;
@@ -71,7 +72,7 @@ export const StyledSettingsSelectorPanel = styled(SettingsSelectorPanel)`
     text-transform: uppercase;
   }
   ${TripFormClasses.SettingsHeader} {
-    color: #333333;
+    color: ${colors.text.primary};
     font-size: 18px;
     margin: 16px 0px;
   }
@@ -82,22 +83,22 @@ export const StyledSettingsSelectorPanel = styled(SettingsSelectorPanel)`
     select {
       ${commonInputCss}
       -webkit-appearance: none;
-      border-radius: 3px;
+      border-radius: ${borderRadius.sm};
       font-size: 14px;
       height: 34px;
       line-height: 1.42857;
       margin-bottom: 20px;
 
       &:focus {
-        border-color: #66afe9;
-        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
-          0 0 8px rgba(102, 175, 233, 0.6);
+        border-color: ${colors.border.dark};
+        box-shadow: inset 0 1px 1px ${colors.shadow.sm},
+          0 0 8px ${colors.shadow.md};
         outline: 0;
       }
     }
     > div:last-child::after {
       box-sizing: border-box;
-      color: #000;
+      color: ${colors.secondary};
       content: '▼';
       font-size: 67%;
       pointer-events: none;
@@ -195,9 +196,9 @@ export const StyledDateTimeSelector = styled(DateTimeSelector)`
     margin: 20px 0px 15px;
     input {
       ${commonInputCss}
-      background-color: #fff;
+      background-color: ${colors.primary};
       border: 0;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid ${colors.secondary};
       box-shadow: none;
       outline: none;
       text-align: center;

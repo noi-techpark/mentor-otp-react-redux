@@ -1,5 +1,5 @@
 :root {
-  --hover-color: #ffe;
+  --hover-color: #f3f3f3;
 }
 
 .otp .options > .header {
@@ -14,17 +14,17 @@
 
 /* Track */
 .otp .options > .list::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f3f3f3;
 }
 
 /* Handle */
 .otp .options > .list::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #565e64;
 }
 
 /* Handle on hover */
 .otp .options > .list::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #212529;
 }
 
 /* REALTIME ALERT */
@@ -32,21 +32,21 @@
 .otp .realtime-alert {
   padding: 12px 20px;
   margin-bottom: 20px;
-  background-color: #fdf8d6;
+  background-color: #f3f3f3;
 }
 
 .otp .simple-realtime-annotation {
-  color: #888;
+  color: #565e64;
   font-size: 14px;
   text-align: center;
   padding: 6px;
-  background-color: #fcf9d3;
+  background-color: #f3f3f3;
 }
 
 /* TRIP TOOLS ROW */
 
 .otp .trip-tools-container {
-  background-color: #eee;
+  background-color: #f3f3f3;
   border-radius: 6px;
   margin: 15px 5px;
   padding: 10px 16px;

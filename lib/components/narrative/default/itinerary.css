@@ -11,12 +11,12 @@
 
 .otp .option.default-itin {
   padding: 10px;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 /* Only show border is not expanded */
 .otp .option.default-itin:not(.expanded) {
-  border-top: 1px solid grey;
+  border-top: 1px solid #565e64;
 }
 
 /* Reset cursor when expanded */
@@ -72,25 +72,25 @@
 }
 .otp .option.metro-itin div.header .itin-wrapper,
 .otp .option.metro-itin div.header .itin-wrapper-small {
-  background: #fffffff8;
+  background: #FFFFFF;
   overflow: hidden;
   transition: all 0.075s ease-out;
 }
 .otp .option.metro-itin:not(.expanded) div.header .itin-wrapper,
 .otp .option.metro-itin:not(.expanded) div.header .itin-wrapper-small {
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
 }
 .otp .option.metro-itin div.header .itin-wrapper:hover,
 .otp .option.metro-itin div.header .itin-wrapper-small:hover {
-  background: #ffffffff;
+  background: #FFFFFF;
   cursor: pointer;
 }
 
 .otp .option.metro-itin .realtime::before {
   display: inline-block;
   content: "";
-  background: rgb(0, 180, 0);
+  background: #000000;
   animation: pulse-opacity 2s ease-in-out infinite;
   width: 7px;
   height: 14px;
@@ -121,7 +121,7 @@
   text-decoration: underline;
 }
 .metro-itin.expanded div.header button:not(.active):hover {
-  color: #090909ef;
+  color: #212529;
 }
 
 @keyframes pulse-opacity {
@@ -135,7 +135,7 @@
 
 /* Show side border if active and not expanded */
 .otp .option.default-itin.active:not(.expanded) {
-  border-left: 4px teal solid;
+  border-left: 4px #000000 solid;
 }
 
 /* Highlight if hovering within search results.
@@ -198,8 +198,8 @@
 .otp .option.default-itin > .header .title > .summary > .mode-block {
   height: 18px;
   width: 18px;
-  color: #eee;
-  fill: #eee;
+  color: #f3f3f3;
+  fill: #f3f3f3;
 }
 
 .otp .option.default-itin > .header .title > .summary > .arrow-block {
@@ -210,10 +210,10 @@
 /* ITINERARY LEG */
 
 .otp .option.default-itin .leg {
-  background-color: #fff;
+  background-color: #FFFFFF;
   padding: 10px;
   margin-bottom: 8px;
-  border: 1px solid #bbb;
+  border: 1px solid #dee2e6;
   border-radius: 3px;
 }
 
@@ -222,7 +222,7 @@
 }
 
 .otp .option.default-itin .leg.active {
-  background-color: #fff;
+  background-color: #FFFFFF;
 }
 
 .otp .option.default-itin .leg > .header {
@@ -243,10 +243,10 @@
 
 .otp .option.default-itin .route-short-name {
   vertical-align: middle;
-  background-color: #888;
+  background-color: #565e64;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: #FFFFFF;
   padding: 1px 5px 2px 5px;
   border-radius: 8px;
 }
@@ -296,7 +296,7 @@
   top: 10px;
   bottom: 0;
   width: 4px;
-  background-color: #888;
+  background-color: #565e64;
 }
 
 .otp .option.default-itin .transit-leg-body .trip-line-middle {
@@ -305,7 +305,7 @@
   top: 0;
   bottom: 0;
   width: 4px;
-  background-color: #888;
+  background-color: #565e64;
 }
 
 .otp .option.default-itin .transit-leg-body .trip-line-bottom {
@@ -314,7 +314,7 @@
   top: 0px;
   height: 10px;
   width: 4px;
-  background-color: #888;
+  background-color: #565e64;
 }
 
 .otp .option.default-itin .transit-leg-body .trip-line-stop {
@@ -323,7 +323,7 @@
   left: -15px;
   height: 4;
   width: 8;
-  background-color: #888;
+  background-color: #565e64;
 }
 
 .otp .option.default-itin .transit-leg-body .stop-bubble {
@@ -331,8 +331,8 @@
   top: 4px;
   width: 12px;
   height: 12px;
-  border: 2px solid black;
-  background-color: #fff;
+  border: 2px solid #000000;
+  background-color: #FFFFFF;
   border-radius: 6px;
 }
 
@@ -379,7 +379,7 @@
 
 .otp .option.default-itin .step {
   cursor: pointer;
-  background-color: #eee;
+  background-color: #f3f3f3;
   margin-bottom: 4px;
   padding: 4px;
   font-size: x-small;
@@ -390,7 +390,7 @@
 }
 
 .otp .option.default-itin .step.active {
-  background-color: #ccc;
+  background-color: #e9ecef;
   /*border: 1px dotted;*/
 }
 

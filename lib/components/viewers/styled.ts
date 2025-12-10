@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors, borderRadius } from '../util/design-tokens'
 
 interface RenderProps {
   backgroundColor?: string
@@ -10,7 +11,7 @@ interface RenderProps {
 /** Route Details */
 export const Container = styled.div<RenderProps>`
   background-color: ${(props) =>
-    props.full ? props.backgroundColor || '#ddd' : 'inherit'};
+    props.full ? props.backgroundColor || colors.background.secondary : 'inherit'};
   color: ${(props) => (props.full ? props.textColor : 'inherit')};
   height: 100%;
   overflow-y: hidden;
@@ -67,16 +68,16 @@ export const PatternContainer = styled.div`
 `
 
 export const StopContainer = styled.ol<RenderProps>`
-  color: ${(props) => props?.textColor || '#333'};
-  background-color: ${(props) => props?.backgroundColor || '#fff'};
+  color: ${(props) => props?.textColor || colors.text.primary};
+  background-color: ${(props) => props?.backgroundColor || colors.primary};
   overflow-y: scroll;
   height: 100%;
-  /* 100px bottom padding is needed to ensure all stops 
+  /* 100px bottom padding is needed to ensure all stops
   are shown when browsers don't calculate 100% sensibly */
   padding: 15px 0 100px;
 `
 export const StopLink = styled.button<RenderProps>`
-  color: ${(props) => props?.textColor + 'da' || '#333'};
+  color: ${(props) => props?.textColor + 'da' || colors.text.primary};
   background-color: transparent;
   border: none;
   padding: 0;
@@ -84,7 +85,7 @@ export const StopLink = styled.button<RenderProps>`
   width: 95%;
 
   &:hover {
-    color: ${(props) => props?.textColor || '#23527c'};
+    color: ${(props) => props?.textColor || colors.text.secondary};
     text-decoration: underline;
   }
 `
@@ -142,13 +143,13 @@ export const PatternRowItem = styled.li<{ roundedTop?: boolean }>`
   }
 
   &:first-of-type .header.stop-view {
-    border-top-left-radius: ${({ roundedTop }) => (roundedTop ? '10px' : '0')};
-    border-top-right-radius: ${({ roundedTop }) => (roundedTop ? '10px' : '0')};
+    border-top-left-radius: ${({ roundedTop }) => (roundedTop ? borderRadius.lg : '0')};
+    border-top-right-radius: ${({ roundedTop }) => (roundedTop ? borderRadius.lg : '0')};
   }
 
   &:last-of-type .header.stop-view {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: ${borderRadius.lg};
+    border-bottom-right-radius: ${borderRadius.lg};
   }
 `
 

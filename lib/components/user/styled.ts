@@ -2,6 +2,7 @@ import { Button, Panel } from 'react-bootstrap'
 import styled, { css } from 'styled-components'
 
 import { RED_ON_WHITE } from '../util/colors'
+import { colors, borderRadius } from '../util/design-tokens'
 
 export const PageHeading = styled.h2`
   margin: 10px 0px 45px 0px;
@@ -21,7 +22,7 @@ export const StackedPaneContainer = styled.div`
 `
 
 export const SubNavContainer = styled.div`
-  border-bottom: solid 1px #adadad;
+  border-bottom: solid 1px ${colors.border.medium};
   margin-bottom: 25px;
   padding: 5px 0px 10px 0px;
 `
@@ -38,7 +39,7 @@ export const SubNavLinks = styled.div`
 
   .btn-link.active {
     border: none;
-    border-bottom: 3px solid #adadad;
+    border-bottom: 3px solid ${colors.border.medium};
   }
 `
 
@@ -47,7 +48,7 @@ export const TripHeader = styled.h3`
 `
 
 export const TripPanelHeading = styled(Panel.Heading)`
-  background-color: white !important;
+  background-color: ${colors.primary} !important;
 `
 
 export const TripPanelAlert = styled.button`
@@ -63,7 +64,7 @@ export const TripPanelAlert = styled.button`
 `
 
 export const TripPanelFooter = styled(Panel.Footer)`
-  background-color: white !important;
+  background-color: ${colors.primary} !important;
   padding: 0px;
   button {
     border: 0px;
@@ -79,7 +80,7 @@ export const TripPanelFooter = styled(Panel.Footer)`
 
   button:nth-child(2) {
     border-radius: 0;
-    border-left: 1px solid #ddd;
+    border-left: 1px solid ${colors.border.light};
   }
 `
 
