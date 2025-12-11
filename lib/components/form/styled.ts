@@ -12,7 +12,7 @@ const commonButtonCss = css`
   -moz-user-select: none;
   -ms-user-select: none;
   background: none;
-  border: 1px solid rgb(187, 187, 187);
+  border: 1px solid #dee2e6;
   border-radius: 3px;
   font-family: inherit;
   font-size: inherit;
@@ -24,10 +24,10 @@ const commonButtonCss = css`
   user-select: none;
 
   &.active {
-    background-color: var(--main-base-color, rgb(173, 216, 230));
-    border: 2px solid rgb(0, 0, 0);
+    background-color: var(--main-base-color, #000000);
+    border: 2px solid #000000;
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    color: var(--main-color, white);
+    color: var(--main-color, #ffffff);
     font-weight: 600;
   }
 `

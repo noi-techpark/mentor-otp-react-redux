@@ -11,16 +11,45 @@ import { AppReduxState } from '../../util/state-types'
 import { DEFAULT_APP_TITLE } from '../../util/constants'
 import InvisibleA11yLabel from '../util/invisible-a11y-label'
 import NavLoginButtonAuth0 from '../user/nav-login-button-auth0'
+import Opendatahub from '../../assets/opendatahub.png'
 
 import AppMenu, { Icon } from './app-menu'
 import LocaleSelector from './locale-selector'
 import NavbarItem from './nav-item'
 import ViewSwitcher from './view-switcher'
 
+// import { connect } from 'react-redux'
+// import * as uiActions from '../../actions/ui'
+// import { accountLinks, getAuth0Config } from '../../util/auth'
+// import { AppConfig } from '../../util/config-types'
+// import { AppReduxState } from '../../util/state-types'
+// import { DEFAULT_APP_TITLE } from '../../util/constants'
+
+// import { Nav, Navbar } from 'react-bootstrap'
+// import { useIntl } from 'react-intl'
+
+// import InvisibleA11yLabel from '../util/invisible-a11y-label'
+// import AppMenu, { Icon } from './app-menu'
+// import LocaleSelector from './locale-selector'
+// import NavbarItem from './nav-item'
+
+// import NavLoginButtonAuth0 from '../user/nav-login-button-auth0'
+// import Opendatahub from '../../assets/opendatahub.png'
+
+// import React from 'react'
+// import styled from 'styled-components'
+
+// import ViewSwitcher from './view-switcher'
+
 const StyledNav = styled(Nav)`
   /* Almost override bootstrap's margin-right: -15px */
   margin-right: -5px;
   /* Target only the svgs in the Navbar */
+
+  margin-right: -5px;
+  flex-grow: 1;
+  justify-content: flex-end;
+
   & > li > button > svg,
   & > li > span > button > span > svg {
     height: 18px;
@@ -36,6 +65,23 @@ const NavItemOnLargeScreens = styled(NavbarItem)`
   display: block;
   @media (max-width: 768px) {
     display: none !important;
+  }
+`
+
+const LogoListItem = styled.li`
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (max-width: 768px) {
+    right: 5px;
+
+    img {
+      height: 30px;
+    }
   }
 `
 
@@ -138,6 +184,19 @@ const DesktopNav = ({
               />
             )}
           </StyledNav>
+          <LogoListItem>
+            <a
+              href="https://www.opendatahub.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                alt="Open Data Hub"
+                src={Opendatahub}
+                style={{ height: 24 }}
+              />
+            </a>
+          </LogoListItem>
         </Navbar.Header>
       </Navbar>
     </header>

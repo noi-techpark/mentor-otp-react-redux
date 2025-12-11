@@ -3,7 +3,7 @@
 .app-menu-button {
   border: none;
   background: none;
-  color: #fff;
+  color: #000000;
   font-size: 24px;
   padding: 0px 0px;
 }
@@ -73,7 +73,7 @@
   justify-content: center;
 }
 .view-switcher a {
-  color: rgba(255, 255, 255, 0.85);
+  color: #000000;
   border-radius: 15px;
   font-size: 14px;
   padding: 6px 12px;
@@ -91,7 +91,7 @@
 }
 
 .view-switcher a:hover {
-  color: #fff;
+  color: #565e64;
 }
 
 /* Full screen modal styling */

@@ -12,7 +12,7 @@ const buttonTransitionCss = css`
 `
 
 export const boxShadowCss = css`
-  box-shadow: rgba(0, 0, 0, 0.15) 0 0 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 `
 
 // TODO: this needs to be in line with the mode selector buttons, ideally importing the styles
@@ -25,7 +25,7 @@ export const buttonCss = css`
   ${buttonTransitionCss}
 
   &:active {
-    background: #e5e5e5;
+    background: #f3f3f3;
   }
 
   &:hover {
@@ -42,14 +42,14 @@ export const Button = styled.button`
 `
 
 export const PlanTripButton = styled(Button)`
-  background-color: green;
-  color: #ffffffdd;
+  background-color: #000000;
+  color: #ffffff;
   padding: 5px;
 
   &:active {
     ${activeCss}
-    background: green;
-    filter: saturate(50%);
+    background: #000000;
+    filter: brightness(80%);
   }
 
   span {
