@@ -9,6 +9,7 @@ import { accountLinks, getAuth0Config } from '../../util/auth'
 import { AppConfig } from '../../util/config-types'
 import { AppReduxState } from '../../util/state-types'
 import { DEFAULT_APP_TITLE } from '../../util/constants'
+import ImpactLogo from '../../assets/impact-logo.png'
 import InvisibleA11yLabel from '../util/invisible-a11y-label'
 import NavLoginButtonAuth0 from '../user/nav-login-button-auth0'
 import Opendatahub from '../../assets/opendatahub.png'
@@ -186,15 +187,11 @@ const DesktopNav = ({
           </StyledNav>
           <LogoListItem>
             <a
-              href="https://www.opendatahub.com/"
+              href="https://europa.provincia.bz.it/it/informazione-e-visibilita-fesr"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img
-                alt="Open Data Hub"
-                src={Opendatahub}
-                style={{ height: 24 }}
-              />
+              <img alt="Impact Logo" src={ImpactLogo} style={{ height: 24 }} />
             </a>
           </LogoListItem>
         </Navbar.Header>
